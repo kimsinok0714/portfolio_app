@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="mb-24">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-12 leading-tight tracking-tight">
               안녕하세요,{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-800">
+              <span className="text-green-600">
                 홍길동
               </span>
               입니다
