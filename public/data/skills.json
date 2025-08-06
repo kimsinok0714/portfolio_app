@@ -1,0 +1,116 @@
+{
+  "frontend": [
+    {
+      "name": "React",
+      "level": 95,
+      "icon": "⚛️",
+      "description": "컴포넌트 기반 UI 라이브러리"
+    },
+    {
+      "name": "Next.js",
+      "level": 90,
+      "icon": "▲",
+      "description": "React 기반 풀스택 프레임워크"
+    },
+    {
+      "name": "TypeScript",
+      "level": 85,
+      "icon": "🔷",
+      "description": "타입 안전성을 제공하는 JavaScript"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": 88,
+      "icon": "🎨",
+      "description": "유틸리티 기반 CSS 프레임워크"
+    },
+    {
+      "name": "JavaScript",
+      "level": 92,
+      "icon": "🟨",
+      "description": "동적 웹 개발 언어"
+    },
+    {
+      "name": "HTML/CSS",
+      "level": 90,
+      "icon": "🌐",
+      "description": "웹 표준 마크업 및 스타일링"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "level": 85,
+      "icon": "🟢",
+      "description": "JavaScript 런타임 환경"
+    },
+    {
+      "name": "Express.js",
+      "level": 80,
+      "icon": "🚂",
+      "description": "Node.js 웹 프레임워크"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 75,
+      "icon": "🐘",
+      "description": "관계형 데이터베이스"
+    },
+    {
+      "name": "MongoDB",
+      "level": 70,
+      "icon": "🍃",
+      "description": "NoSQL 데이터베이스"
+    },
+    {
+      "name": "REST API",
+      "level": 88,
+      "icon": "🔗",
+      "description": "RESTful 웹 서비스"
+    },
+    {
+      "name": "GraphQL",
+      "level": 65,
+      "icon": "🔮",
+      "description": "API 쿼리 언어"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Git",
+      "level": 90,
+      "icon": "📦",
+      "description": "버전 관리 시스템"
+    },
+    {
+      "name": "Docker",
+      "level": 75,
+      "icon": "🐳",
+      "description": "컨테이너화 플랫폼"
+    },
+    {
+      "name": "AWS",
+      "level": 70,
+      "icon": "☁️",
+      "description": "클라우드 컴퓨팅 서비스"
+    },
+    {
+      "name": "VS Code",
+      "level": 95,
+      "icon": "💻",
+      "description": "코드 에디터"
+    },
+    {
+      "name": "Figma",
+      "level": 65,
+      "icon": "🎯",
+      "description": "UI/UX 디자인 도구"
+    },
+    {
+      "name": "Notion",
+      "level": 85,
+      "icon": "📝",
+      "description": "협업 및 문서화 도구"
+    }
+  ]
+}

@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 개인 포트폴리오 One-Page 웹사이트 **요구사항항 명세서**
 
-## Getting Started
+> **목표**  
+> 모던하면서도 전문적인 인상을 주는 반응형 싱글 페이지 포트폴리오를 구현한다.  
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1. 공통 요구 사항
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| 구분 | 세부 내용 |
+|------|-----------|
+| **반응형** |  ≥ 1024px(데스크톱), 768–1023px(태블릿), ≤ 767px(모바일) 레이아웃 최적화 |
+| **디자인 가이드** |  • 컬러 팔레트 : 주색·보조색·중립색  <br>• 시스템 폰트 우선, 한국어 폰트 Fallback <br>• 8px 그리드 기반 간격 규칙 |
+| **스크롤 내비** |  클릭 시 부드러운 스크롤(스크롤 스파이로 현재 섹션 하이라이트) |
+| **접근성** | alt, ARIA, 키보드 포커스, 명도 대비 WCAG AA 이상 |
+| **SEO** | title, meta description, Open Graph, JSON-LD(Person) |
+| **성능** | 자산 압축·지연 로드, 코드 스플리팅, WebP 이미지 |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 2. 섹션별 기능 정의
 
-To learn more about Next.js, take a look at the following resources:
+### 2.1 Header / GNB
+| 기능 | 설명 |
+|------|------|
+| 로고 클릭 | 최상단으로 스크롤 |
+| 메뉴 항목 | Home / About / Skills / Projects / Contact |
+| 모바일 메뉴 | 햄버거 아이콘 ▶ 슬라이드 인 사이드바 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2.2 Hero
+| 기능 | 설명 |
+|------|------|
+| 환영 메시지 | 대제목(이름) + 소제목(직무) |
+| CTA 버튼 | `#projects` 섹션으로 이동 |
+| 배경 요소(선택) | CSS 애니메이션 또는 정적 Hero 이미지 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2.3 About
+| 기능 | 설명 |
+|------|------|
+| 프로필 이미지 | 원형 · lazy-loading |
+| 자기소개 | 200–300자, 마크다운 지원 불필요(단락 분리) |
+| 핵심 경력 | 아이콘+텍스트 리스트(예: 총 7년, 15개 프로젝트) |
 
-## Deploy on Vercel
+### 2.4 Skills
+| 기능 | 설명 |
+|------|------|
+| 스킬 카드 | 아이콘, 이름, 숙련도(0–100) |
+| 애니메이션 | 뷰포트 진입 시 프로그레스 바 채우기 |
+| 데이터 | JSON 파일(`skills.json`)에서 동적 로드 |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2.5 Projects
+| 기능 | 설명 |
+|------|------|
+| 프로젝트 카드 | 썸네일, 제목, 80자 설명, 주요 기술 뱃지 |
+| 인터랙션 | 호버 시 그림자·확대, “Demo / GitHub” 버튼 |
+| 그리드 | PC 3열 / Tablet 2열 / Mobile 1열 |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2.6 Contact
+| 기능 | 설명 |
+|------|------|
+| 연락처 정보 | 이메일 · GitHub · LinkedIn 아이콘 링크 |
+| 문의 폼 | 이름, 이메일, 메시지(필수) |
+| 검증 | 실시간 입력 검증 & 실패 시 메시지 표시 |
+| 전송 | POST `/api/contact` → 성공 시 토스트 알림 |
+
+### 2.7 Footer
+| 기능 | 설명 |
+|------|------|
+| 저작권 | `© 2025 홍길동. All rights reserved.` |
+| 링크 | 개인정보 처리방침, 이용약관(더미) |
+
